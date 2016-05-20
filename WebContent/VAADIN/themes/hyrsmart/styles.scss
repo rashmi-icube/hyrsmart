@@ -1,0 +1,9 @@
+@import "addons.scss";
+@import "hyrsmart.scss";
+
+/* This file prefixes all rules with the theme name to avoid causing conflicts with other themes. */
+/* The actual styles should be defined in hyrsmart.scss */
+.hyrsmart {
+  @include addons;
+  @include hyrsmart;
+}
