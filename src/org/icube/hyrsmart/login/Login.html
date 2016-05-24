@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src&quot;,&quot;THEME&quot;:&quot;vaadin_demo&quot;}">
+ </head> 
+ <body> 
+  <vaadin-absolute-layout> 
+   <vaadin-grid-layout responsive size-full :top="0px" :left="0px"> 
+    <row></row> 
+    <row> 
+     <column rowspan="2"></column> 
+     <column> 
+      <vaadin-vertical-layout width="322px" height-full> 
+       <vaadin-label style-name="h1 colored" responsive size-auto plain-text _id="label_login">
+         LOGIN 
+       </vaadin-label> 
+       <vaadin-text-field required invalid-committed input-prompt="Username" responsive immediate height="37px" _id="textfield_username"></vaadin-text-field> 
+       <vaadin-password-field invalid-allowed="false" required responsive immediate value="Password" _id="textfiled_password"></vaadin-password-field> 
+       <vaadin-button style-name="large" responsive height="37px" _id="button_submit">
+         Login 
+       </vaadin-button> 
+      </vaadin-vertical-layout> 
+     </column> 
+    </row> 
+    <row> 
+     <column> 
+      <vaadin-button responsive plain-text _id="forgot_password">
+        Forgot your password? 
+      </vaadin-button> 
+     </column> 
+    </row> 
+   </vaadin-grid-layout> 
+  </vaadin-absolute-layout>  
+ </body>
+</html>

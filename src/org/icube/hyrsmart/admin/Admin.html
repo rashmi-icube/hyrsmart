@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src&quot;,&quot;THEME&quot;:&quot;hyrsmart&quot;}">
+ </head> 
+ <body> 
+  <vaadin-absolute-layout responsive> 
+   <vaadin-horizontal-layout responsive :top="0px" :left="0px"></vaadin-horizontal-layout> 
+   <vaadin-label responsive plain-text _id="lbl_adminname" :top="20px" :left="1200px">
+     Hi,NAME 
+   </vaadin-label> 
+   <vaadin-label style-name="huge colored" responsive size-auto plain-text _id="lbl_logo" :top="10px" :left="80px">
+     Hyrsmart 
+   </vaadin-label> 
+   <vaadin-tab-sheet style-name="icons-on-top" responsive width="79%" height="34px" _id="tab_admin" :top="60px" :right="-382px"> 
+    <tab caption="SUMMARY" selected> 
+     <vaadin-label responsive size-auto _id="lbl_adminsummary"></vaadin-label> 
+    </tab> 
+    <tab caption="VIEW"> 
+     <vaadin-label responsive size-auto _id="lbl_adminview"></vaadin-label> 
+    </tab> 
+   </vaadin-tab-sheet> 
+   <vaadin-text-field style-name="align-center huge" width="225px" height="150px" readonly value="1307" _id="txt_allowednum" :top="166px" :left="43px"></vaadin-text-field> 
+   <vaadin-text-field style-name="align-center huge" width="225px" height="150px" readonly value="1307" _id="txt_completednum" :top="166px" :left="306px"></vaadin-text-field> 
+   <vaadin-text-field style-name="align-center huge" width="225px" height="150px" readonly value="1307" _id="txt_exitednum" :top="166px" :left="566px"></vaadin-text-field> 
+   <vaadin-text-field style-name="align-center huge" width="225px" height="150px" readonly value="1307" _id="txt_live" :top="166px" :left="833px"></vaadin-text-field> 
+   <vaadin-text-field style-name="align-center huge" width="225px" height="150px" readonly value="1307" _id="txt_balance" :top="166px" :left="1101px"></vaadin-text-field> 
+   <vaadin-text-field responsive width="225px" readonly value="ALLOWED TESTS" _id="txt_allowedlbl" :top="279px" :left="43px"></vaadin-text-field> 
+   <vaadin-text-field width="225px" value="COMPLETED TESTS" _id="txt_completedlbl" :top="279px" :left="306px"></vaadin-text-field> 
+   <vaadin-text-field width="225px" value="EXITED TESTS" :top="279px" :left="566px"></vaadin-text-field> 
+   <vaadin-text-field width="224px" value="LIVE TESTS" :top="279px" :left="834px"></vaadin-text-field> 
+   <vaadin-text-field width="225px" value="BALANCE TESTS" :top="278px" :left="1101px"></vaadin-text-field> 
+   <vaadin-grid height="269px" _id="grd_testdetails" :top="344px" :left="43px"></vaadin-grid> 
+  </vaadin-absolute-layout>  
+ </body>
+</html>
