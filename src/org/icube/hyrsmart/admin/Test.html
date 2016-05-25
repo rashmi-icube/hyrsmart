@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src&quot;,&quot;THEME&quot;:&quot;hyrsmart&quot;}">
+ </head> 
+ <body> 
+  <vaadin-absolute-layout> 
+   <vaadin-label responsive width="28.02%" height="25px" plain-text _id="lbl_adminname" :top="30px" :left="1234px">
+     Hi,NAME 
+   </vaadin-label> 
+   <vaadin-label style-name="huge colored" responsive size-auto plain-text _id="lbl_logo" :top="15px" :left="13px">
+     Hyrsmart 
+   </vaadin-label> 
+   <vaadin-tab-sheet size-full :top="65px" :left="45px"> 
+    <tab caption="SUMMARY" selected> 
+     <vaadin-vertical-layout size-auto></vaadin-vertical-layout> 
+    </tab> 
+    <tab caption="VIEW"> 
+     <vaadin-vertical-layout size-full _id="vtly_adminview"> 
+      <vaadin-vertical-layout spacing size-auto> 
+       <vaadin-grid-layout spacing> 
+        <row> 
+         <column> 
+          <vaadin-vertical-layout spacing size-auto> 
+           <vaadin-native-select caption="Recruiter Login ID" responsive item-caption-mode="id" width="326px" height="25px" _id="dpn_recruiterlogin"> 
+            <option>Option 1</option> 
+            <option>Option 2</option> 
+            <option>Option 3</option> 
+           </vaadin-native-select> 
+           <vaadin-date-field caption="From(date)" width="326px" height="25px" _id="dte_fromdate"></vaadin-date-field> 
+          </vaadin-vertical-layout> 
+         </column> 
+         <column> 
+          <vaadin-vertical-layout spacing size-auto> 
+           <vaadin-text-field caption="Search" input-prompt="Search by name" width="440px" height="26px" _id="txt_search"></vaadin-text-field> 
+           <vaadin-horizontal-layout spacing responsive width="900px" height="54px" :bottom :right> 
+            <vaadin-date-field caption="To(date)" width="175px" height="25px" _id="dte_todate"></vaadin-date-field> 
+            <vaadin-native-select caption="Test Status" item-caption-mode="id" width="175px" height="26px" _id="dpn_status" :right> 
+             <option>Option 1</option> 
+             <option>Option 2</option> 
+             <option>Option 3</option> 
+            </vaadin-native-select> 
+            <vaadin-button responsive width="155px" height="55px" plain-text _id="btn_reset" :middle :right>
+              RESET 
+            </vaadin-button> 
+            <vaadin-button width="155px" height="55px" plain-text _id="btn_submit" :middle>
+              SUBMIT 
+            </vaadin-button> 
+           </vaadin-horizontal-layout> 
+          </vaadin-vertical-layout> 
+         </column> 
+        </row> 
+        <row></row> 
+       </vaadin-grid-layout> 
+       <vaadin-grid-layout width-full> 
+        <row> 
+         <column> 
+          <vaadin-horizontal-layout spacing width="1358px"> 
+           <vaadin-label width="155px" plain-text _id="lbl_totalres">
+             1929 results 
+           </vaadin-label> 
+           <vaadin-native-select caption="Sort By" responsive item-caption-mode="id" width="436px" height="25px" _id="dpn_sorttest" :right> 
+            <option>Option 1</option> 
+            <option>Option 2</option> 
+            <option>Option 3</option> 
+           </vaadin-native-select> 
+           <vaadin-button width="155px" height="55px" plain-text _id="btn_exportcsv" :middle :right>
+             Export CSV 
+           </vaadin-button> 
+           <vaadin-button width="155px" height="55px" plain-text _id="btn_exportpdf" :middle>
+             Export PDF 
+           </vaadin-button> 
+          </vaadin-horizontal-layout> 
+         </column> 
+        </row> 
+       </vaadin-grid-layout> 
+       <vaadin-grid size-full _id="grd_testdetails"></vaadin-grid> 
+      </vaadin-vertical-layout> 
+     </vaadin-vertical-layout> 
+    </tab> 
+   </vaadin-tab-sheet> 
+  </vaadin-absolute-layout>  
+ </body>
+</html>
