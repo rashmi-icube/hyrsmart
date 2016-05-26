@@ -4,81 +4,109 @@
   <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src&quot;,&quot;THEME&quot;:&quot;hyrsmart&quot;}">
  </head> 
  <body> 
-  <vaadin-absolute-layout> 
-   <vaadin-label responsive width="28.02%" height="25px" plain-text _id="lbl_adminname" :top="30px" :left="1234px">
-     Hi,NAME 
-   </vaadin-label> 
+  <vaadin-absolute-layout responsive> 
    <vaadin-label style-name="huge colored" responsive size-auto plain-text _id="lbl_logo" :top="15px" :left="13px">
      Hyrsmart 
    </vaadin-label> 
-   <vaadin-tab-sheet size-full :top="65px" :left="45px"> 
-    <tab caption="SUMMARY" selected> 
-     <vaadin-vertical-layout size-auto></vaadin-vertical-layout> 
+   <vaadin-tab-sheet responsive width="102.24%" height-full :top="65px" :left="13px"> 
+    <tab caption="WELCOME >" selected> 
+     <vaadin-vertical-layout responsive size-full _id="vtly_welcome"> 
+      <vaadin-text-area rows="50" style-name="tiny borderless" responsive width="70%" height="50%" :center>
+        USER AGREEMENT I understand that this test is a confidential and secure test. I realize that HYR smart Pvt. Ltd. owns the rights to the intellectual property, copyright and trademarks used in providing the test, and these are protected by law. The test is made available to me solely for the purpose of my assessment. I agree that I will not discuss the content of the test with anyone and I will not record, copy, publish, disclose or transmit any exam question or answer, in whole or in part, in any form or by any means- verbal or written, mechanical or electronic or for any purpose. I certify that the personal data provided at registration will be used to transmit my score and for assessment and monitoring purposes. I understand and agree that if I provide false information or if I am found cheating – • The Test Administrator may immediately dismiss me from the test session • My scores may be cancelled • I may be banned from retaking any HYR smart test; and • I may face legal prosecution 
+      </vaadin-text-area> 
+     </vaadin-vertical-layout> 
     </tab> 
-    <tab caption="VIEW"> 
-     <vaadin-vertical-layout size-full _id="vtly_adminview"> 
+    <tab caption="REGISTRATION >"> 
+     <vaadin-vertical-layout responsive size-full _id="vtly_registration"> 
       <vaadin-vertical-layout spacing size-auto> 
-       <vaadin-grid-layout spacing> 
-        <row> 
-         <column> 
-          <vaadin-vertical-layout spacing size-auto> 
-           <vaadin-native-select caption="Recruiter Login ID" responsive item-caption-mode="id" width="326px" height="25px" _id="dpn_recruiterlogin"> 
-            <option>Option 1</option> 
-            <option>Option 2</option> 
-            <option>Option 3</option> 
-           </vaadin-native-select> 
-           <vaadin-date-field caption="From(date)" width="326px" height="25px" _id="dte_fromdate"></vaadin-date-field> 
-          </vaadin-vertical-layout> 
-         </column> 
-         <column> 
-          <vaadin-vertical-layout spacing size-auto> 
-           <vaadin-text-field caption="Search" input-prompt="Search by name" width="440px" height="26px" _id="txt_search"></vaadin-text-field> 
-           <vaadin-horizontal-layout spacing responsive width="900px" height="54px" :bottom :right> 
-            <vaadin-date-field caption="To(date)" width="175px" height="25px" _id="dte_todate"></vaadin-date-field> 
-            <vaadin-native-select caption="Test Status" item-caption-mode="id" width="175px" height="26px" _id="dpn_status" :right> 
-             <option>Option 1</option> 
-             <option>Option 2</option> 
-             <option>Option 3</option> 
-            </vaadin-native-select> 
-            <vaadin-button responsive width="155px" height="55px" plain-text _id="btn_reset" :middle :right>
-              RESET 
-            </vaadin-button> 
-            <vaadin-button width="155px" height="55px" plain-text _id="btn_submit" :middle>
-              SUBMIT 
-            </vaadin-button> 
-           </vaadin-horizontal-layout> 
-          </vaadin-vertical-layout> 
-         </column> 
-        </row> 
-        <row></row> 
-       </vaadin-grid-layout> 
-       <vaadin-grid-layout width-full> 
-        <row> 
-         <column> 
-          <vaadin-horizontal-layout spacing width="1358px"> 
-           <vaadin-label width="155px" plain-text _id="lbl_totalres">
-             1929 results 
-           </vaadin-label> 
-           <vaadin-native-select caption="Sort By" responsive item-caption-mode="id" width="436px" height="25px" _id="dpn_sorttest" :right> 
-            <option>Option 1</option> 
-            <option>Option 2</option> 
-            <option>Option 3</option> 
-           </vaadin-native-select> 
-           <vaadin-button width="155px" height="55px" plain-text _id="btn_exportcsv" :middle :right>
-             Export CSV 
-           </vaadin-button> 
-           <vaadin-button width="155px" height="55px" plain-text _id="btn_exportpdf" :middle>
-             Export PDF 
-           </vaadin-button> 
-          </vaadin-horizontal-layout> 
-         </column> 
-        </row> 
-       </vaadin-grid-layout> 
-       <vaadin-grid size-full _id="grd_testdetails"></vaadin-grid> 
+       <vaadin-label style-name="huge" width-auto height="50%" plain-text _id="lbl_personalinfo">
+         PERSONAL INFORMATION 
+       </vaadin-label> 
+       <vaadin-horizontal-layout spacing> 
+        <vaadin-label style-name="large" responsive size-auto plain-text _id="lbl_name">
+          NAME 
+        </vaadin-label> 
+        <vaadin-text-field input-prompt="First Name" style-name="borderless align-center" responsive _id="txt_firstname"></vaadin-text-field> 
+        <vaadin-text-field input-prompt="Middle Name" style-name="borderless align-center" responsive _id="txt_middlename"></vaadin-text-field> 
+        <vaadin-text-field input-prompt="Last Name" style-name="borderless align-center" _id="txt_lastname"></vaadin-text-field> 
+       </vaadin-horizontal-layout> 
+       <vaadin-horizontal-layout spacing> 
+        <vaadin-label style-name="large" responsive size-auto plain-text _id="lbl_email">
+          EMAIL 
+        </vaadin-label> 
+        <vaadin-text-field input-prompt="          Email" style-name="borderless" responsive _id="txt_email"></vaadin-text-field> 
+       </vaadin-horizontal-layout> 
+       <vaadin-horizontal-layout spacing> 
+        <vaadin-label style-name="large" responsive size-auto plain-text _id="lbl_mobile">
+          MOBILE 
+        </vaadin-label> 
+        <vaadin-text-field input-prompt="      Mobile" style-name="borderless" responsive width="379px" _id="txt_mobile"></vaadin-text-field> 
+       </vaadin-horizontal-layout> 
+       <vaadin-horizontal-layout spacing> 
+        <vaadin-label style-name="large" responsive size-auto plain-text _id="lbl_degree">
+          DEGREE 
+        </vaadin-label> 
+        <vaadin-text-field input-prompt="     Degree" style-name="borderless" responsive width="379px" _id="txt_degree"></vaadin-text-field> 
+       </vaadin-horizontal-layout> 
+       <vaadin-horizontal-layout spacing> 
+        <vaadin-label style-name="large" responsive size-auto plain-text _id="lbl_stream">
+          STREAM 
+        </vaadin-label> 
+        <vaadin-text-field input-prompt="     Stream" style-name="borderless" responsive width="379px" _id="txt_stream"></vaadin-text-field> 
+       </vaadin-horizontal-layout> 
+       <vaadin-horizontal-layout spacing> 
+        <vaadin-label style-name="large" responsive size-auto plain-text _id="lbl_city">
+          YOUR CITY 
+        </vaadin-label> 
+        <vaadin-native-select item-caption-mode="id" width="197px" _id="dpn_city"> 
+         <option>Option 1</option> 
+         <option>Option 2</option> 
+         <option>Option 3</option> 
+        </vaadin-native-select> 
+       </vaadin-horizontal-layout> 
+       <vaadin-horizontal-layout spacing> 
+        <vaadin-label style-name="large" responsive size-auto plain-text _id="lbl_aadharno">
+          AADHAR NO. 
+        </vaadin-label> 
+        <vaadin-text-field input-prompt="     Aadhar no." style-name="borderless" responsive width="379px" _id="txt_stream2"></vaadin-text-field> 
+       </vaadin-horizontal-layout> 
+       <vaadin-horizontal-layout spacing> 
+        <vaadin-button plain-text _id="btn_cancel" :right>
+          CANCEL 
+        </vaadin-button> 
+        <vaadin-button responsive plain-text _id="btn_continue">
+          CONTINUE 
+        </vaadin-button> 
+       </vaadin-horizontal-layout> 
       </vaadin-vertical-layout> 
      </vaadin-vertical-layout> 
     </tab> 
+    <tab caption="INSTRUCTIONS >"> 
+     <vaadin-vertical-layout responsive size-full _id="vtly_instructions"></vaadin-vertical-layout> 
+    </tab> 
+    <tab caption="TEST >"> 
+     <vaadin-vertical-layout responsive size-full _id="vtly_test"> 
+      <vaadin-vertical-layout size-full :center> 
+       <vaadin-label style-name="no-margin small" width="660px" plain-text _id="lbl_quesno">
+         Question 1 out of 3 
+       </vaadin-label> 
+       <vaadin-horizontal-layout> 
+        <vaadin-label size-auto plain-text _id="lbl_ques">
+          Label 
+        </vaadin-label> 
+       </vaadin-horizontal-layout> 
+      </vaadin-vertical-layout> 
+     </vaadin-vertical-layout> 
+    </tab> 
+    <tab caption="THANKYOU"> 
+     <vaadin-vertical-layout responsive size-full _id="vtly_thankyou"></vaadin-vertical-layout> 
+    </tab> 
    </vaadin-tab-sheet> 
+   <vaadin-native-select style-name="small" responsive item-caption-mode="id" width="271px" height="33px" _id="dpn_selectlang" :top="70px" :left="982px"> 
+    <option>Option 1</option> 
+    <option>Option 2</option> 
+    <option>Option 3</option> 
+   </vaadin-native-select> 
   </vaadin-absolute-layout>  
  </body>
 </html>
