@@ -2,12 +2,15 @@ package org.icube.hyrsmart;
 
 import javax.servlet.annotation.WebServlet;
 
-import org.icube.hyrsmart.admin.SuperAdminView;
+import org.icube.hyrsmart.login.LoginView;
 
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
+import com.vaadin.navigator.Navigator;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
+import com.vaadin.ui.AbsoluteLayout;
+import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.UI;
 
 @SuppressWarnings("serial")
@@ -21,7 +24,13 @@ public class HyrSmartUI extends UI {
 
 	@Override
 	protected void init(VaadinRequest request) {
-		setContent(new SuperAdminView());
+		ComponentContainer myViewContainer = new AbsoluteLayout();
+		this.setContent(myViewContainer);
+
+		Navigator navigator = new Navigator(this, myViewContainer);
+		navigator.addView("", new LoginView(navigator));
+		// navigator.addView("summary", new SecondPageView(navigator));
+
 	}
 
 }

@@ -11,7 +11,7 @@ import org.icube.hyrsmart.java.database.DatabaseConnectionHelper;
 import org.icube.hyrsmart.java.helper.UtilHelper;
 import org.icube.hyrsmart.java.user.User;
 
-public class Login {
+public class LoginHelper {
 
 	/**
 	 * Validates user name and password for login page
@@ -45,19 +45,19 @@ public class Login {
 			ResultSet res = cstmt1.executeQuery();
 			while (res.next()) {
 				if (res.getInt("emp_id") == 0) {
-					org.apache.log4j.Logger.getLogger(Login.class).error("Invalid username/password");
+					org.apache.log4j.Logger.getLogger(LoginHelper.class).error("Invalid username/password");
 					throw new Exception("Invalid credentials!!!");
 				} else {
 					u.setCompanyId(companyId);
 					u.setUserId(res.getInt("user_id"));
 					u.setDisplayName(res.getString("display_name"));
 					u.setRoleId(res.getInt("role_id"));
-					org.apache.log4j.Logger.getLogger(Login.class).debug("Successfully validated user with email ID : " + emailId);
+					org.apache.log4j.Logger.getLogger(LoginHelper.class).debug("Successfully validated user with email ID : " + emailId);
 				}
 			}
 
 		} catch (SQLException e) {
-			org.apache.log4j.Logger.getLogger(Login.class).error("Exception while retrieving the company database", e);
+			org.apache.log4j.Logger.getLogger(LoginHelper.class).error("Exception while retrieving the company database", e);
 		}
 		return u;
 	}
