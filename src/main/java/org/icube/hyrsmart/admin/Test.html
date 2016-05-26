@@ -11,9 +11,9 @@
    <vaadin-tab-sheet responsive width="102.24%" height-full :top="65px" :left="13px"> 
     <tab caption="WELCOME >" selected> 
      <vaadin-vertical-layout responsive size-full _id="vtly_welcome"> 
-      <vaadin-text-area rows="50" style-name="tiny borderless" responsive width="70%" height="50%" :center>
-        USER AGREEMENT I understand that this test is a confidential and secure test. I realize that HYR smart Pvt. Ltd. owns the rights to the intellectual property, copyright and trademarks used in providing the test, and these are protected by law. The test is made available to me solely for the purpose of my assessment. I agree that I will not discuss the content of the test with anyone and I will not record, copy, publish, disclose or transmit any exam question or answer, in whole or in part, in any form or by any means- verbal or written, mechanical or electronic or for any purpose. I certify that the personal data provided at registration will be used to transmit my score and for assessment and monitoring purposes. I understand and agree that if I provide false information or if I am found cheating – • The Test Administrator may immediately dismiss me from the test session • My scores may be cancelled • I may be banned from retaking any HYR smart test; and • I may face legal prosecution 
-      </vaadin-text-area> 
+      <vaadin-label style-name="align-center large" size-full plain-text _id="lbl_welcome">
+        Welcome message 
+      </vaadin-label> 
      </vaadin-vertical-layout> 
     </tab> 
     <tab caption="REGISTRATION >"> 
@@ -82,24 +82,173 @@
      </vaadin-vertical-layout> 
     </tab> 
     <tab caption="INSTRUCTIONS >"> 
-     <vaadin-vertical-layout responsive size-full _id="vtly_instructions"></vaadin-vertical-layout> 
+     <vaadin-vertical-layout responsive size-full _id="vtly_instructions"> 
+      <vaadin-label style-name="large align-center" size-full plain-text _id="lbl_instructions">
+        Test Instructions 
+      </vaadin-label> 
+     </vaadin-vertical-layout> 
     </tab> 
     <tab caption="TEST >"> 
      <vaadin-vertical-layout responsive size-full _id="vtly_test"> 
-      <vaadin-vertical-layout size-full :center> 
-       <vaadin-label style-name="no-margin small" width="660px" plain-text _id="lbl_quesno">
+      <vaadin-vertical-layout responsive size-auto _id="vtly_quescat1"> 
+       <vaadin-label style-name="no-margin small" size-auto plain-text _id="lbl_quesno1">
          Question 1 out of 3 
        </vaadin-label> 
-       <vaadin-horizontal-layout> 
-        <vaadin-label size-auto plain-text _id="lbl_ques">
-          Label 
-        </vaadin-label> 
+       <vaadin-label width-auto height="50px" plain-text _id="lbl_ques1">
+         Label 
+       </vaadin-label> 
+       <vaadin-label width-auto height="50%" _id="lbl_subques1">
+         Label 
+       </vaadin-label> 
+       <vaadin-option-group style-name="horizontal" item-caption-mode="id" height="40px" _id="opg_subquesgp1"> 
+        <option>Option 1</option> 
+        <option>Option 2</option> 
+        <option>Option 3</option> 
+       </vaadin-option-group> 
+       <vaadin-label width-auto height="50%" plain-text _id="lbl_subques2">
+         Label 
+       </vaadin-label> 
+       <vaadin-option-group style-name="horizontal" item-caption-mode="id" height="40px" _id="opg_subquesgp2"> 
+        <option>Option 1</option> 
+        <option>Option 2</option> 
+        <option>Option 3</option> 
+       </vaadin-option-group> 
+       <vaadin-label size-auto plain-text _id="lbl_subques3">
+         Label 
+       </vaadin-label> 
+       <vaadin-option-group style-name="horizontal" item-caption-mode="id" height="40px" _id="opg_subquesgp3"> 
+        <option>Option 1</option> 
+        <option>Option 2</option> 
+        <option>Option 3</option> 
+       </vaadin-option-group> 
+       <vaadin-label size-auto plain-text _id="lbl_subques4">
+         Label 
+       </vaadin-label> 
+       <vaadin-option-group style-name="horizontal" item-caption-mode="id" height="40px" _id="opg_subquesgp4"> 
+        <option>Option 1</option> 
+        <option>Option 2</option> 
+        <option>Option 3</option> 
+       </vaadin-option-group> 
+       <vaadin-label size-auto plain-text _id="lbl_subques5">
+         Label 
+       </vaadin-label> 
+       <vaadin-option-group style-name="horizontal" item-caption-mode="id" height="40px" _id="opg_subquesgp5"> 
+        <option>Option 1</option> 
+        <option>Option 2</option> 
+        <option>Option 3</option> 
+       </vaadin-option-group> 
+       <vaadin-horizontal-layout spacing height="40px" :right> 
+        <vaadin-button responsive plain-text _id="btn_testprev1" :right>
+          PREVIOUS 
+        </vaadin-button> 
+        <vaadin-button responsive plain-text _id="btn_testnext1">
+          NEXT 
+        </vaadin-button> 
        </vaadin-horizontal-layout> 
+      </vaadin-vertical-layout> 
+      <vaadin-vertical-layout visible="false" size-full _id="vtly_quescat2"> 
+       <vaadin-grid-layout width="66.35%" height="70%" :center> 
+        <row> 
+         <column> 
+          <vaadin-label size-auto plain-text _id="lbl_quesno2">
+            Label 
+          </vaadin-label> 
+         </column> 
+        </row> 
+        <row> 
+         <column> 
+          <vaadin-label size-auto plain-text _id="lbl_ques2">
+            Label 
+          </vaadin-label> 
+         </column> 
+        </row> 
+        <row> 
+         <column> 
+          <vaadin-label size-auto plain-text _id="lbl_subques1forques2">
+            Label 
+          </vaadin-label> 
+         </column> 
+        </row> 
+        <row> 
+         <column> 
+          <vaadin-option-group responsive item-caption-mode="id" _id="opg_subques1forques2gp1"> 
+           <option>Option 1</option> 
+           <option>Option 2</option> 
+           <option>Option 3</option> 
+          </vaadin-option-group> 
+         </column> 
+        </row> 
+        <row> 
+         <column> 
+          <vaadin-horizontal-layout responsive width="50%" :center> 
+           <vaadin-button plain-text _id="btn_testprev2" :center>
+             PREVIOUS 
+           </vaadin-button> 
+           <vaadin-button plain-text _id="btn_testnext2">
+             NEXT 
+           </vaadin-button> 
+          </vaadin-horizontal-layout> 
+         </column> 
+        </row> 
+       </vaadin-grid-layout> 
+      </vaadin-vertical-layout> 
+      <vaadin-vertical-layout visible="false" size-full _id="vtly_quescat3"> 
+       <vaadin-grid-layout width="66.3%" height="80%" :center> 
+        <row> 
+         <column> 
+          <vaadin-label size-auto plain-text _id="lbl_quesno3">
+            Label 
+          </vaadin-label> 
+         </column> 
+        </row> 
+        <row> 
+         <column> 
+          <vaadin-label size-auto plain-text _id="lbl_ques3">
+            Label 
+          </vaadin-label> 
+         </column> 
+        </row> 
+        <row> 
+         <column> 
+          <vaadin-horizontal-layout spacing width="75%"> 
+           <vaadin-image icon="fonticon://FontAwesome/f0fe" responsive _id="img_quesimg"></vaadin-image> 
+           <vaadin-vertical-layout width="50%"> 
+            <vaadin-label width-auto height="30px" plain-text _id="lbl_subques1forques3" :center>
+              Label 
+            </vaadin-label> 
+            <vaadin-option-group item-caption-mode="id" _id="opg_subques1forques3gp1" :right> 
+             <option>Option 1</option> 
+             <option>Option 2</option> 
+             <option>Option 3</option> 
+            </vaadin-option-group> 
+           </vaadin-vertical-layout> 
+          </vaadin-horizontal-layout> 
+         </column> 
+        </row> 
+        <row> 
+         <column> 
+          <vaadin-horizontal-layout spacing height="50%" :bottom :center> 
+           <vaadin-button plain-text _id="btn_testprev3">
+             PREVIOUS 
+           </vaadin-button> 
+           <vaadin-button plain-text _id="btn_testfinish1">
+             FINISH 
+           </vaadin-button> 
+          </vaadin-horizontal-layout> 
+         </column> 
+        </row> 
+        <row></row> 
+        <row></row> 
+       </vaadin-grid-layout> 
       </vaadin-vertical-layout> 
      </vaadin-vertical-layout> 
     </tab> 
     <tab caption="THANKYOU"> 
-     <vaadin-vertical-layout responsive size-full _id="vtly_thankyou"></vaadin-vertical-layout> 
+     <vaadin-vertical-layout responsive size-full _id="vtly_thankyou"> 
+      <vaadin-label style-name="huge align-center" size-full plain-text _id="lbl_thankyou">
+        thankyou msg 
+      </vaadin-label> 
+     </vaadin-vertical-layout> 
     </tab> 
    </vaadin-tab-sheet> 
    <vaadin-native-select style-name="small" responsive item-caption-mode="id" width="271px" height="33px" _id="dpn_selectlang" :top="70px" :left="982px"> 
