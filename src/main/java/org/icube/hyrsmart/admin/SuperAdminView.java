@@ -19,7 +19,6 @@ public class SuperAdminView extends SuperAdmin implements View {
 
 	public SuperAdminView(Navigator navigator) {
 		super();
-		//navigator.addView("adminview", (View) vlyt_view.getUI());
 
 	}
 
@@ -28,7 +27,7 @@ public class SuperAdminView extends SuperAdmin implements View {
 	}
 
 	public void addSummaryTableHeader() {
-		grd_summary.addColumn("ID");
+		grd_summary.addColumn(new Button("ID"));
 		grd_summary.addColumn("ALLOWED");
 		grd_summary.addColumn("COMPLETED");
 		grd_summary.addColumn("EXITED");
@@ -64,7 +63,7 @@ public class SuperAdminView extends SuperAdmin implements View {
 				for (TestCount tc1 : tcList) {
 					User uObj = new User();
 					User subAdmin = uObj.getUser(u.getCompanyId(), tc1.getUserId());
-					
+
 					Button btn_sub_admin = new Button();
 					btn_sub_admin.setCaption(subAdmin.getDisplayName());
 					btn_sub_admin.addClickListener(new Button.ClickListener() {
@@ -72,17 +71,17 @@ public class SuperAdminView extends SuperAdmin implements View {
 						@Override
 						public void buttonClick(ClickEvent event) {
 							try {
-								 
-								
+								tab_admin.setSelectedTab(vlyt_view);
 							} catch (Exception e) {
-								org.apache.log4j.Logger.getLogger(SuperAdminView.class).debug("Cannot go to the view tab for " + subAdmin.getDisplayName(), e);
+								org.apache.log4j.Logger.getLogger(SuperAdminView.class).debug(
+										"Cannot go to the view tab for " + subAdmin.getDisplayName(), e);
 							}
 
 						}
 					});
-				
 					
-					grd_summary.addRow(subAdmin.getDisplayName(), String.valueOf(tc1.getAllowed()), String.valueOf(tc1.getCompleted()), String
+					
+					grd_summary.addRow(btn_sub_admin, String.valueOf(tc1.getAllowed()), String.valueOf(tc1.getCompleted()), String
 							.valueOf(tc1.getExited()), String.valueOf(tc1.getLive()), String.valueOf(tc1.getBalance()));
 				}
 

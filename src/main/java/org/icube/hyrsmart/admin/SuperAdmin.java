@@ -9,6 +9,7 @@ import com.vaadin.ui.Grid;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.NativeSelect;
+import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.declarative.Design;
@@ -27,6 +28,7 @@ import com.vaadin.ui.declarative.Design;
 public class SuperAdmin extends AbsoluteLayout {
 	protected Label lbl_logo;
 	protected Label lbl_greeting;
+	protected TabSheet tab_admin;
 	protected VerticalLayout vlyt_summary;
 	protected HorizontalLayout hzt_count;
 	protected TextField txt_allowed_count;
