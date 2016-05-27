@@ -2,6 +2,7 @@ package org.icube.hyrsmart;
 
 import javax.servlet.annotation.WebServlet;
 
+import org.icube.hyrsmart.admin.SuperAdminView;
 import org.icube.hyrsmart.login.LoginView;
 
 import com.vaadin.annotations.Theme;
@@ -29,8 +30,7 @@ public class HyrSmartUI extends UI {
 
 		Navigator navigator = new Navigator(this, myViewContainer);
 		navigator.addView("", new LoginView(navigator));
-		// navigator.addView("summary", new SecondPageView(navigator));
-
+		navigator.addView("summary", new SuperAdminView(navigator));
 	}
 
 }

@@ -91,7 +91,7 @@ public class DatabaseConnectionHelper {
 					sqlUrl = "jdbc:mysql://" + rs.getString("sql_server") + ":3306/" + rs.getString("comp_sql_dbname");
 					sqlUserName = rs.getString("sql_user_id");
 					sqlPassword = rs.getString("sql_password");
-					companyImagePath.put(companyId, rs.getString("images_path"));
+					companyImagePath.put(companyId, rs.getString("image_url"));
 				}
 			}
 

@@ -56,7 +56,7 @@ public class SummaryHelper {
 	public TestCount getTotalTestListCount(int companyId, int userId) {
 		TestCount tc = new TestCount();
 		List<TestCount> tcList = getTestCountList(companyId, userId);
-		for (int i = 0; i <= tcList.size(); i++) {
+		for (int i = 0; i < tcList.size(); i++) {
 			TestCount t = tcList.get(i);
 			tc.setAllowed(tc.getAllowed() + t.getAllowed());
 			tc.setBalance(tc.getBalance() + t.getBalance());

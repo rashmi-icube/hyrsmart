@@ -44,7 +44,7 @@ public class LoginHelper {
 			cstmt1.setString("ip", ipAddress);
 			ResultSet res = cstmt1.executeQuery();
 			while (res.next()) {
-				if (res.getInt("emp_id") == 0) {
+				if (res.getInt("user_id") == 0) {
 					org.apache.log4j.Logger.getLogger(LoginHelper.class).error("Invalid username/password");
 					throw new Exception("Invalid credentials!!!");
 				} else {
