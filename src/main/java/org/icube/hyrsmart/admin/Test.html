@@ -8,12 +8,24 @@
    <vaadin-label style-name="huge colored" responsive size-auto plain-text _id="lbl_logo" :top="15px" :left="13px">
      Hyrsmart 
    </vaadin-label> 
-   <vaadin-tab-sheet responsive width="102.24%" height-full :top="65px" :left="13px"> 
+   <vaadin-tab-sheet responsive width="102.24%" height-full _id="tbs_test" :top="65px" :left="13px"> 
     <tab caption="WELCOME >" selected> 
      <vaadin-vertical-layout responsive size-full _id="vtly_welcome"> 
-      <vaadin-label style-name="align-center large" size-full plain-text _id="lbl_welcome">
-        Welcome message 
-      </vaadin-label> 
+      <vaadin-label style-name="align-center large" size-full _id="lbl_welcome" :bottom></vaadin-label> 
+      <vaadin-vertical-layout spacing responsive size-auto :middle> 
+       <vaadin-option-group responsive item-caption-mode="id" _id="opg_agreement" :middle> 
+        <option>I have read and agree to the terms and conditions and wish to continue to take the test</option> 
+        <option>I have read and disagree to the terms and conditions and do not wish to continue to take the test.</option> 
+       </vaadin-option-group> 
+      </vaadin-vertical-layout> 
+      <vaadin-horizontal-layout spacing responsive :bottom :center> 
+       <vaadin-button plain-text _id="btn_startNewTest">
+         START NEW TEST 
+       </vaadin-button> 
+       <vaadin-button plain-text _id="btn_signout">
+         SIGN OUT 
+       </vaadin-button> 
+      </vaadin-horizontal-layout> 
      </vaadin-vertical-layout> 
     </tab> 
     <tab caption="REGISTRATION >"> 
@@ -58,11 +70,7 @@
         <vaadin-label style-name="large" responsive size-auto plain-text _id="lbl_city">
           YOUR CITY 
         </vaadin-label> 
-        <vaadin-native-select item-caption-mode="id" width="197px" _id="dpn_city"> 
-         <option>Option 1</option> 
-         <option>Option 2</option> 
-         <option>Option 3</option> 
-        </vaadin-native-select> 
+        <vaadin-native-select caption="Select a city" responsive item-caption-mode="id" width="197px" _id="dpn_city"></vaadin-native-select> 
        </vaadin-horizontal-layout> 
        <vaadin-horizontal-layout spacing> 
         <vaadin-label style-name="large" responsive size-auto plain-text _id="lbl_aadharno">
@@ -251,11 +259,7 @@
      </vaadin-vertical-layout> 
     </tab> 
    </vaadin-tab-sheet> 
-   <vaadin-native-select style-name="small" responsive item-caption-mode="id" width="271px" height="33px" _id="dpn_selectlang" :top="70px" :left="982px"> 
-    <option>Option 1</option> 
-    <option>Option 2</option> 
-    <option>Option 3</option> 
-   </vaadin-native-select> 
+   <vaadin-native-select style-name="small" responsive item-caption-mode="id" width="271px" height="33px" _id="dpn_selectlang" :top="70px" :left="982px"></vaadin-native-select> 
   </vaadin-absolute-layout>  
  </body>
 </html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;hyrsmart&quot;}">
+ </head> 
+ <body> 
+  <vaadin-absolute-layout> 
+   <vaadin-label style-name="huge colored" responsive plain-text _id="lbl_logo" :top="0px" :left="0px">
+     Hyrsmart 
+   </vaadin-label> 
+   <vaadin-vertical-layout size-auto :top="60px" :left="50px"> 
+    <vaadin-label size-auto plain-text _id="lbl_profile">
+      CANDIDATE PROFILE 
+    </vaadin-label> 
+   </vaadin-vertical-layout> 
+   <vaadin-grid-layout height="60%" :top="120px" :left="50px"> 
+    <row> 
+     <column> 
+      <vaadin-horizontal-layout spacing> 
+       <vaadin-label size-auto plain-text _id="lbl_name">
+         NAME 
+       </vaadin-label> 
+       <vaadin-label size-auto plain-text _id="lbl_namevalue">
+         name 
+       </vaadin-label> 
+      </vaadin-horizontal-layout> 
+     </column> 
+     <column> 
+      <vaadin-horizontal-layout spacing> 
+       <vaadin-label size-auto plain-text _id="lbl_id" :right>
+         ID 
+       </vaadin-label> 
+       <vaadin-label size-auto plain-text _id="lbl_idvalue">
+         candidate id 
+       </vaadin-label> 
+      </vaadin-horizontal-layout> 
+     </column> 
+    </row> 
+    <row> 
+     <column> 
+      <vaadin-horizontal-layout spacing> 
+       <vaadin-label size-auto plain-text _id="lbl_mobile" :right>
+         MOBILE 
+       </vaadin-label> 
+       <vaadin-label size-auto plain-text _id="lbl_mobilevalue">
+         mobile no. 
+       </vaadin-label> 
+      </vaadin-horizontal-layout> 
+     </column> 
+     <column> 
+      <vaadin-horizontal-layout spacing> 
+       <vaadin-label size-auto plain-text _id="lbl_email" :right>
+         EMAIL 
+       </vaadin-label> 
+       <vaadin-label size-auto plain-text _id="lbl_emailvalue" :right>
+         email id 
+       </vaadin-label> 
+      </vaadin-horizontal-layout> 
+     </column> 
+    </row> 
+    <row> 
+     <column> 
+      <vaadin-horizontal-layout spacing> 
+       <vaadin-label size-auto plain-text _id="lbl_degree" :right>
+         DEGREE 
+       </vaadin-label> 
+       <vaadin-label size-auto plain-text _id="lbl_degreevalue">
+         degree 
+       </vaadin-label> 
+      </vaadin-horizontal-layout> 
+     </column> 
+     <column> 
+      <vaadin-horizontal-layout spacing> 
+       <vaadin-label size-auto plain-text _id="lbl_stream" :right>
+         ID 
+       </vaadin-label> 
+       <vaadin-label size-auto plain-text _id="lbl_streamvalue">
+         stream 
+       </vaadin-label> 
+      </vaadin-horizontal-layout> 
+     </column> 
+    </row> 
+   </vaadin-grid-layout> 
+   <vaadin-vertical-layout spacing size-auto :top="400px" :left="50px"> 
+    <vaadin-label size-auto plain-text>
+      CANDIDATE SCORE 
+    </vaadin-label> 
+    <vaadin-horizontal-layout spacing responsive> 
+     <vaadin-label style-name="small" responsive size-auto plain-text _id="lbl_score">
+       SCORE 
+     </vaadin-label> 
+     <vaadin-label size-auto plain-text _id="lbl_scorevalue">
+       score value 
+     </vaadin-label> 
+    </vaadin-horizontal-layout> 
+    <vaadin-horizontal-layout spacing> 
+     <vaadin-button responsive plain-text _id="btn_print">
+       PRINT 
+     </vaadin-button> 
+     <vaadin-button plain-text _id="btn_save">
+       SAVE 
+     </vaadin-button> 
+    </vaadin-horizontal-layout> 
+   </vaadin-vertical-layout> 
+  </vaadin-absolute-layout>  
+ </body>
+</html>

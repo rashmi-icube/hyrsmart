@@ -26,7 +26,8 @@ public class LoginView extends Login implements View {
 					if (USER != null && USER.getRoleId() != 3) {
 						navigator.navigateTo("summary");
 					} else{
-						// TODO navigate to test directly 
+						//navigate to test directly 
+						navigator.navigateTo("testWelcome");
 					}
 				} catch (Exception e) {
 					org.apache.log4j.Logger.getLogger(LoginView.class).debug("Invalid username and/or password", e);

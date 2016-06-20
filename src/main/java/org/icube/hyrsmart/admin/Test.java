@@ -8,6 +8,7 @@ import com.vaadin.ui.Image;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.NativeSelect;
 import com.vaadin.ui.OptionGroup;
+import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.declarative.Design;
@@ -25,8 +26,12 @@ import com.vaadin.ui.declarative.Design;
 @SuppressWarnings("serial")
 public class Test extends AbsoluteLayout {
 	protected Label lbl_logo;
+	protected TabSheet tbs_test;
 	protected VerticalLayout vtly_welcome;
 	protected Label lbl_welcome;
+	protected OptionGroup opg_agreement;
+	protected Button btn_startNewTest;
+	protected Button btn_signout;
 	protected VerticalLayout vtly_registration;
 	protected Label lbl_personalinfo;
 	protected Label lbl_name;
