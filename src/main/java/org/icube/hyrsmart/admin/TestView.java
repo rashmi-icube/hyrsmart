@@ -22,12 +22,24 @@ public class TestView extends Test implements View {
 
 	User u = null;
 	TestHelper th = new TestHelper();
+
 	public TestView(Navigator navigator) {
 		btn_signout.addClickListener(new Button.ClickListener() {
 
 			@Override
 			public void buttonClick(com.vaadin.ui.Button.ClickEvent event) {
 				navigator.navigateTo("");
+			}
+		});
+		
+		btn_continue.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				tbs_test.getTab(vtly_instructions).setEnabled(true);
+				tbs_test.setSelectedTab(vtly_instructions);
+				tbs_test.getTab(vtly_registration).setEnabled(false);
+				
 			}
 		});
 
@@ -39,40 +51,45 @@ public class TestView extends Test implements View {
 				tbs_test.getTab(vtly_registration).setEnabled(true);
 				tbs_test.setSelectedTab(vtly_registration);
 				btn_cancel.setEnabled(true);
-				btn_continue.setEnabled(false);
-				Map<Integer,String> cityMasterMap = new HashMap<>();
+				//btn_continue.setEnabled(false);
+				Map<Integer, String> cityMasterMap = new HashMap<>();
 				dpn_city.clear();
 				Map<Integer, String> languageMap = getLanguageMaster();
 				int selectedLanguageId = getSelectedLangId(languageMap);
-				cityMasterMap = th.getCityMaster(u.getCompanyId(),selectedLanguageId);
+				cityMasterMap = th.getCityMaster(u.getCompanyId(),
+						selectedLanguageId);
 				for (int i : cityMasterMap.keySet()) {
 					String key = cityMasterMap.get(i);
 					dpn_city.addItem(key);
 				}
 				getPersonalInfoLabels(selectedLanguageId);
-				dpn_selectlang.addValueChangeListener(new Property.ValueChangeListener() {
-					
-					@Override
-					public void valueChange(ValueChangeEvent event) {
-						// TODO Auto-generated method stub
-						dpn_city.setImmediate(true);
-						int selectedLanguageId = getSelectedLangId(languageMap);
-						dpn_city.clear();
-						getPersonalInfoLabels(selectedLanguageId);
-						Map<Integer,String> cityMasterMap = th.getCityMaster(u.getCompanyId(),selectedLanguageId);
-						for (int i : cityMasterMap.keySet()) {
-							String key = cityMasterMap.get(i);
-							dpn_city.addItem(key);
-						
-						}
-						
-					}
-				});
+				dpn_selectlang
+						.addValueChangeListener(new Property.ValueChangeListener() {
+
+							@Override
+							public void valueChange(ValueChangeEvent event) {
+								dpn_city.setImmediate(true);
+								int selectedLanguageId = getSelectedLangId(languageMap);
+								dpn_city.clear();
+								getPersonalInfoLabels(selectedLanguageId);
+								Map<Integer, String> cityMasterMap = th
+										.getCityMaster(u.getCompanyId(),
+												selectedLanguageId);
+								for (int i : cityMasterMap.keySet()) {
+									String key = cityMasterMap.get(i);
+									dpn_city.addItem(key);
+
+								}
+
+							}
+						});
+				
 			}
 
 			private void getPersonalInfoLabels(int selectedLanguageId) {
 				LabelHelper lh = new LabelHelper();
-				Map<String, String> labelMap = lh.getPersonalDetailsLabelMap(u.getCompanyId(), selectedLanguageId);
+				Map<String, String> labelMap = lh.getPersonalDetailsLabelMap(
+						u.getCompanyId(), selectedLanguageId);
 				lbl_personalinfo.setValue(labelMap.get("personal_information"));
 				lbl_name.setValue(labelMap.get("name"));
 				txt_firstname.setInputPrompt(labelMap.get("first_name"));
@@ -93,18 +110,17 @@ public class TestView extends Test implements View {
 				btn_continue.setCaption(labelMap.get("continue"));
 			}
 		});
-				
-				btn_cancel.addClickListener(new Button.ClickListener() {
-					
-					@Override
-					public void buttonClick(ClickEvent event) {
-						tbs_test.getTab(vtly_welcome).setEnabled(true);
-						tbs_test.setSelectedTab(vtly_welcome);
-						tbs_test.getTab(vtly_registration).setEnabled(false);
-						
-					}
-				});
-				
+
+		btn_cancel.addClickListener(new Button.ClickListener() {
+
+			@Override
+			public void buttonClick(ClickEvent event) {
+				tbs_test.getTab(vtly_welcome).setEnabled(true);
+				tbs_test.setSelectedTab(vtly_welcome);
+				tbs_test.getTab(vtly_registration).setEnabled(false);
+
+			}
+		});
 
 		opg_agreement.setImmediate(true);
 		opg_agreement.addValueChangeListener(new ValueChangeListener() {
@@ -139,7 +155,7 @@ public class TestView extends Test implements View {
 
 	@Override
 	public void enter(ViewChangeEvent event) {
-		
+
 		u = (User) VaadinSession.getCurrent().getAttribute("currentUser");
 		if (u != null) {
 			String inst = th.getUserAgreement(u.getCompanyId(), 1);
@@ -177,11 +193,9 @@ public class TestView extends Test implements View {
 		}
 
 	}
-	
-	private int getSelectedLangId(
-			Map<Integer, String> languageMap) {
-		String selectedLanguage = dpn_selectlang.getValue()
-				.toString();
+
+	private int getSelectedLangId(Map<Integer, String> languageMap) {
+		String selectedLanguage = dpn_selectlang.getValue().toString();
 		int selectedLanguageId = 1;
 		for (int i : languageMap.keySet()) {
 			selectedLanguageId = (languageMap.get(i)
