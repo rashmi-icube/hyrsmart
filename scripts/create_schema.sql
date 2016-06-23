@@ -1,5 +1,6 @@
 CREATE SCHEMA `hat_master` DEFAULT CHARACTER SET utf8 ;
 
+
 use hat_master;
 
 CREATE TABLE `company_master` (
